@@ -13,12 +13,12 @@ app.use(express.json())
 // Write POST endpoint for creating new product here
 app.post('/api/v1/products', (req, res) => {
  const { name, price, quantity } = req.body;
-  if (!name ||!price||!quantity){
-    return res.status(400).json({
-      status: 'Error',
-      message: 'Invalid product data. Please provide a valid name, price, and quantity.',
-    });
-  }
+  // if (!name ||!price||!quantity){
+  //   return res.status(400).json({
+  //     status: 'Error',
+  //     message: 'Invalid product data. Please provide a valid name, price, and quantity.',
+  //   });
+  // }
   // Generate a new unique ID for the product
   const newId = products.length > 0 ? products[products.length - 1].id + 1 : 1;
 
